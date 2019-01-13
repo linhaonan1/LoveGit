@@ -5,10 +5,10 @@ import os
 
 
 def modify():
-    file = open('F:\桌面缓存\GitHub\MyGit\LoveGit\zero.md', 'r')
+    file = open('F:\LoveGit\zero.md', 'r')
     flag = int(file.readline()) == 0
     file.close()
-    file = open('F:\桌面缓存\GitHub\MyGit\LoveGit\zero.md', 'w+')
+    file = open('F:\LoveGit\zero.md', 'w+')
     if flag:
         file.write('1')
     else:
@@ -17,7 +17,7 @@ def modify():
 
 
 def commit():
-    os.system('git commit -a -m test_github_streak > /dev/null 2>&1')
+    os.system('git commit -a -m "test"')
 
 
 def set_sys_time(year, month, day):
