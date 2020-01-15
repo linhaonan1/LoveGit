@@ -52,5 +52,5 @@ def love_commit(start_date, path, etc_path):
 
 
 if __name__ == '__main__':
-    love_commit(datetime.date(2019, 1, 31), 'F:\桌面缓存\GitHub\MyGit\LoveGit\zero.md', 'F:\桌面缓存\GitHub\MyGit\LoveGit\etc\love')
+    love_commit(datetime.date(2019, 1, 13), 'F:\桌面缓存\GitHub\MyGit\LoveGit\zero.md', 'F:\桌面缓存\GitHub\MyGit\LoveGit\etc\love')
 
