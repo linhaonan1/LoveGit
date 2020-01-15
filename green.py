@@ -26,13 +26,14 @@ async def set_sys_time(year, month, day):
     # date -s Linux修改时间方法
     # Windows 查看Dos命令
     os.system('date')
-    asyncio.sleep(1)
+    asyncio.sleep(0.1)
     os.system('%04d-%02d-%02d' % (year, month, day))
 
 
 def trick_commit(year, month, day):
     print(year, month, day)
     set_sys_time(year, month, day)
+    asyncio.sleep(1)
     modify()
     commit()
 
@@ -44,4 +45,4 @@ def daily_commit(start_date, end_date):
 
 
 if __name__ == '__main__':
-    daily_commit(datetime.date(2019, 1, 13), datetime.date(2020, 1, 16))
+    daily_commit(datetime.date(2019, 4, 13), datetime.date(2019, 5, 16))
