@@ -22,10 +22,10 @@ def commit():
     os.system('git commit -a -m "test"')
 
 
-async def set_sys_time(year, month, day):
+def set_sys_time(year, month, day):
     # date -s Linux修改时间方法
     # Windows 查看Dos命令
-    await os.system('date')
+    os.system('date')
     os.system('%04d-%02d-%02d' % (year, month, day))
 
 
