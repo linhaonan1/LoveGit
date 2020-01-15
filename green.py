@@ -32,7 +32,6 @@ async def set_sys_time(year, month, day):
 def trick_commit(year, month, day):
     print(year, month, day)
     set_sys_time(year, month, day)
-    asyncio.sleep(1)
     modify()
     commit()
 
