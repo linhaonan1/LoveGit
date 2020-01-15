@@ -26,7 +26,6 @@ async def set_sys_time(year, month, day):
     # date -s Linux修改时间方法
     # Windows 查看Dos命令
     os.system('date')
-    asyncio.sleep(0.1)
     os.system('%04d-%02d-%02d' % (year, month, day))
 
 
