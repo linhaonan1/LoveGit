@@ -50,7 +50,7 @@ def random_int_list(start, stop, length):
     return random_list
 
 def daily_commit(start_date, end_date):
-    date_list = random_int_list(1, (end_date - start_date).days, 60)
+    date_list = random_int_list(1, (end_date - start_date).days, 120)
     date_list.sort()
     for i in date_list:
         cur_date = start_date + datetime.timedelta(days=i)
@@ -62,7 +62,7 @@ def main():
     print(j.days)
     i = datetime.date(2020, 3, 14) + datetime.timedelta(days=j.days)
     print(i.day,i.month,i.year)
-    daily_commit(datetime.date(2020, 3, 13), datetime.date(2020, 10, 16))
+    daily_commit(datetime.date(2020, 1, 13), datetime.date(2020, 10, 16))
     
     
 if __name__ == '__main__':
