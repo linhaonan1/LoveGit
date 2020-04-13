@@ -1,7 +1,7 @@
 '''
 Date: 2020-01-15 16:16:13
 LastEditors: Lonel Vino
-LastEditTime: 2020-11-01 21:59:14
+LastEditTime: 2020-04-14 22:12:42
 '''
 import datetime
 import os
@@ -24,7 +24,8 @@ def modify():
 
 def commit():
     # os.sysytem = C语言system()
-    os.system('git commit -a -m "test"')
+    os.system('git add -A')
+    os.system('git commit -m "test"')
 
 
 def set_sys_time(day, month, year):
@@ -45,6 +46,7 @@ def daily_commit(start_date, end_date):
     for i in range((end_date - start_date).days + 1):
         cur_date = start_date + datetime.timedelta(days=i)
         trick_commit(cur_date.day, cur_date.month, cur_date.year)
+    os.system('git push origin master')
 
 
 if __name__ == '__main__':
