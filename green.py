@@ -32,9 +32,8 @@ def commit():
 def set_sys_time(day, month, year):
     # date -s Linux修改时间方法
     # Windows 查看Dos命令
-    print('date %02d-%02d-%04d' % (day,month,year))
+    # print('date %02d-%02d-%04d' % (day,month,year))
     os.system('date %02d-%02d-%04d'  % (day, month, year))
-    print('date %02d-%02d-%04d' % (day,month,year))
 
 
 def trick_commit(day, month, year):
